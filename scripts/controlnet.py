@@ -527,7 +527,7 @@ class Script(scripts.Script, metaclass=(
                 # Inpaint hijack
                 high_quality_border_color[3] = 255
             high_quality_background = np.tile(high_quality_border_color[None, None], [h, w, 1])
-            detected_map = high_quality_resize(detected_map, (safeint(old_w * k), safeint(old_h * k)))
+            # detected_map = high_quality_resize(detected_map, (safeint(old_w * k), safeint(old_h * k)))
             new_h, new_w, _ = detected_map.shape
             pad_h = max(0, (h - new_h) // 2)
             pad_w = max(0, (w - new_w) // 2)
